@@ -193,7 +193,7 @@ class FilesystemLoader implements LoaderInterface, ExistsLoaderInterface, Source
             return false;
         }
 
-        return filemtime($path) < $time;
+        return filemtime($path) <= $time;
     }
 
     /**
